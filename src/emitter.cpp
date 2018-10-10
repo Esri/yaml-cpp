@@ -702,9 +702,6 @@ Emitter& Emitter::Write(const std::string& str) {
       Utils::WriteLiteralString(m_stream, str,
                                 m_pState->CurIndent() + m_pState->GetIndent());
       break;
-    case StringFormat::PreferUnquoted:
-      assert(false);
-      break;
   }
 
   StartedScalar();
