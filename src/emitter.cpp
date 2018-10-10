@@ -703,7 +703,7 @@ Emitter& Emitter::Write(const std::string& str) {
                                 m_pState->CurIndent() + m_pState->GetIndent());
       break;
     case StringFormat::PreferUnquoted:
-      // error
+      assert(false);
       break;
   }
 
