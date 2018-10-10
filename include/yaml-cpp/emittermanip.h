@@ -25,6 +25,7 @@ enum EMITTER_MANIP {
   SingleQuoted,
   DoubleQuoted,
   Literal,
+  PreferUnquoted,
 
   // bool manipulators
   YesNoBool,      // yes, no

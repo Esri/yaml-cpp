@@ -234,6 +234,7 @@ bool EmitterState::SetStringFormat(EMITTER_MANIP value, FmtScope::value scope) {
     case SingleQuoted:
     case DoubleQuoted:
     case Literal:
+    case PreferUnquoted:
       _Set(m_strFmt, value, scope);
       return true;
     default:

@@ -282,6 +282,14 @@ StringFormat::value ComputeStringFormat(const std::string& str,
         return StringFormat::Literal;
       }
       return StringFormat::DoubleQuoted;
+    case PreferUnquoted:
+      if (IsValidPlainScalar(str, flowType, escapeNonAscii)) {
+        return StringFormat::Plain;
+      }
+      if (IsValidLiteralScalar(str, flowType, escapeNonAscii)) {
+        return StringFormat::Literal;
+      }
+      return StringFormat::DoubleQuoted;
     default:
       break;
   }

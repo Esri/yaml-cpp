@@ -21,7 +21,7 @@ namespace YAML {
 class Binary;
 
 struct StringFormat {
-  enum value { Plain, SingleQuoted, DoubleQuoted, Literal };
+  enum value { Plain, SingleQuoted, DoubleQuoted, Literal, PreferUnquoted };
 };
 
 namespace Utils {
