@@ -26,6 +26,7 @@ enum EMITTER_MANIP {
   SingleQuoted,
   DoubleQuoted,
   Literal,
+  PreferUnquoted,
 
   // null manipulators
   LowerNull,
