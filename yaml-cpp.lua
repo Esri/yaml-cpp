@@ -349,30 +349,30 @@ project "yaml-cpp"
     -- project specific configuration settings
 
     -- configuration { "android_x86_release" }
-    
-    -- -------------------------------------------------------------
-    -- configuration { "androidgles3_armv8_debug" }
-    -- -------------------------------------------------------------
-
-    -- common configuration settings
-
-    dofile (_BUILD_DIR .. "/static_androidgles3_armv8_debug.lua")
-
-    -- project specific configuration settings
-
-    -- configuration { "androidgles3_armv8_debug" }
 
     -- -------------------------------------------------------------
-    -- configuration { "androidgles3_armv8_release" }
+    -- configuration { "android_arm64_debug" }
     -- -------------------------------------------------------------
 
     -- common configuration settings
 
-    dofile (_BUILD_DIR .. "/static_androidgles3_armv8_release.lua")
+    dofile (_BUILD_DIR .. "/static_android_arm64_debug.lua")
 
     -- project specific configuration settings
 
-    -- configuration { "androidgles3_armv8_release" }
+    -- configuration { "android_arm64_debug" }
+
+    -- -------------------------------------------------------------
+    -- configuration { "android_arm64_release" }
+    -- -------------------------------------------------------------
+
+    -- common configuration settings
+
+    dofile (_BUILD_DIR .. "/static_android_arm64_release.lua")
+
+    -- project specific configuration settings
+
+    -- configuration { "android_arm64_release" }
 
     -- -------------------------------------------------------------
   end
