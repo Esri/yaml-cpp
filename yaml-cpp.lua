@@ -14,7 +14,7 @@ project "yaml-cpp"
   -- project specific settings
 
   uuid "7AFE0D10-6046-4248-AC3C-AA09469A2125"
-  
+
   flags {
     "NoPCH",
   }
@@ -33,7 +33,7 @@ project "yaml-cpp"
   -- configurations
   -- -------------------------------------------------------------
 
-  if (os.is("windows") and not _TARGET_IS_WINUWP) then
+  if (_PLATFORM_WINDOWS) then
     -- -------------------------------------------------------------
     -- configuration { "windows" }
     -- -------------------------------------------------------------
@@ -97,7 +97,7 @@ project "yaml-cpp"
     -- -------------------------------------------------------------
   end
 
-  if (os.is("linux") and not _OS_IS_ANDROID) then
+  if (_PLATFORM_LINUX) then
     -- -------------------------------------------------------------
     -- configuration { "linux" }
     -- -------------------------------------------------------------
@@ -161,7 +161,7 @@ project "yaml-cpp"
     -- -------------------------------------------------------------
   end
 
-  if (os.is("macosx") and not _OS_IS_IOS and not _OS_IS_ANDROID) then
+  if (_PLATFORM_MACOS) then
     -- -------------------------------------------------------------
     -- configuration { "macosx" }
     -- -------------------------------------------------------------
@@ -201,9 +201,9 @@ project "yaml-cpp"
     -- -------------------------------------------------------------
   end
 
-  if (_OS_IS_IOS) then
+  if (_PLATFORM_IOS) then
     -- -------------------------------------------------------------
-    -- configuration { "ios" } == _OS_IS_IOS
+    -- configuration { "ios*" }
     -- -------------------------------------------------------------
 
     -- common configuration settings
@@ -265,9 +265,9 @@ project "yaml-cpp"
     -- -------------------------------------------------------------
   end
 
-  if (_OS_IS_ANDROID) then
+  if (_PLATFORM_ANDROID) then
     -- -------------------------------------------------------------
-    -- configuration { "android" } == _OS_IS_ANDROID
+    -- configuration { "android*" }
     -- -------------------------------------------------------------
 
     -- common configuration settings
@@ -377,9 +377,9 @@ project "yaml-cpp"
     -- -------------------------------------------------------------
   end
 
-  if (_TARGET_IS_WINUWP) then
+  if (_PLATFORM_WINUWP) then
     -- -------------------------------------------------------------
-    -- configuration { "winuwp" } == _TARGET_IS_WINUWP
+    -- configuration { "windows" }
     -- -------------------------------------------------------------
 
     -- common configuration settings
