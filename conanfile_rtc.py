@@ -3,7 +3,7 @@ from conans import ConanFile
 
 class YamlCppConan(ConanFile):
     name = "yaml-cpp"
-    version = "0.6.2"
+    version = "0.7.0"
     url = "https://github.com/Esri/yaml-cpp/tree/runtimecore"
     license = "https://github.com/Esri/yaml-cpp/blob/runtimecore/LICENSE"
     description = "A YAML parser and emitter in C++."
